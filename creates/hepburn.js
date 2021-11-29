@@ -10,11 +10,10 @@ module.exports = {
 
   operation: {
     inputFields: [
-      { key: 'firstname', required: true, type: 'string' },
-      { key: 'lastname', required: true, type: 'string' }
+      { key: 'target', required: true, type: 'string' }
     ],
     perform: async (z, bundle) => {
-      return await ConvHelper.conv2hepburn(bundle.inputData.firstname, bundle.inputData.lastname);
+      return await ConvHelper.conv2hepburn(bundle.inputData.target);
     },
   },
 };
